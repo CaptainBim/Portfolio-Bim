@@ -1,5 +1,4 @@
-/* ===================== BAHASA (EN / ID) ===================== */
-// Inggris (en) adalah bahasa default. Indonesia (id) sebagai alternatif.
+/* BAHASA (EN / ID) */
 const I18N = {
   en: {
     "nav.about": "About",
@@ -109,25 +108,19 @@ const I18N = {
 const langToggle = document.getElementById("langToggle");
 
 function currentLang() {
-  return localStorage.getItem("lang") || "en"; // default: English
+  return localStorage.getItem("lang") || "en";
 }
 
 function applyLang(lang) {
   const dict = I18N[lang] || I18N.en;
 
-  // Terjemahkan semua elemen bertanda data-i18n
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     if (dict[key] !== undefined) el.innerHTML = dict[key];
   });
 
-  // Judul tab & deskripsi meta sekarang dikontrol langsung dari index.html
-  // (baris <title> dan <meta name="description">), tidak ditimpa di sini.
-
-  // Atribut bahasa pada <html>
   document.documentElement.lang = lang;
 
-  // Status tombol EN/ID
   document.querySelectorAll(".lang-opt").forEach((opt) => {
     opt.classList.toggle("active", opt.dataset.lang === lang);
   });
@@ -139,5 +132,4 @@ langToggle.addEventListener("click", () => {
   applyLang(currentLang() === "en" ? "id" : "en");
 });
 
-// Terapkan bahasa default (English) saat halaman dimuat
 applyLang(currentLang());

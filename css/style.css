@@ -1,26 +1,20 @@
-/* ============================================================
-   Personal Brand
-   Mode terang : tema Firefly (hijau muda & hijau tua, putih inti)
-   Mode gelap  : tema Suisei (biru muda & biru tua + langit bintang)
-   ============================================================ */
-
 :root {
   --bg: #ffffff;
-  --bg-alt: #f2faf6;          /* sangat hijau muda */
-  --bg-dark: #0b3d2c;         /* hijau tua */
+  --bg-alt: #f2faf6;
+  --bg-dark: #0b3d2c;
   --bg-dark-2: #0e4a34;
 
-  --ink: #10291f;             /* teks utama */
-  --muted: #55776a;           /* teks sekunder */
-  --line: #e3f1ea;            /* garis halus */
+  --ink: #10291f;
+  --muted: #55776a;
+  --line: #e3f1ea;
 
   --tint-50: #e4f7ee;
   --tint-100: #d9f6e8;
-  --tint-200: #b4ecd2;        /* hijau muda */
+  --tint-200: #b4ecd2;
   --tint-300: #7fdbb4;
-  --accent: #1c8a60;          /* aksen hijau */
+  --accent: #1c8a60;
   --accent-2: #2f9c72;
-  --accent-deep: #106b48;     /* hijau tua */
+  --accent-deep: #106b48;
 
   --radius: 18px;
   --radius-lg: 26px;
@@ -44,7 +38,7 @@
   --glow-b: rgba(127, 219, 180, 0.14);
 }
 
-/* ============ MODE GELAP (Suisei night) — tidak berubah ============ */
+/* MODE GELAP (Suisei night) — tidak berubah */
 html.dark {
   color-scheme: dark;
   --bg: #0a142c;
@@ -118,7 +112,7 @@ section {
   scroll-margin-top: 80px;
 }
 
-/* ===================== LANGIT BINTANG ===================== */
+/* LANGIT BINTANG */
 .stars {
   position: fixed;
   inset: 0;
@@ -155,7 +149,7 @@ html.dark .stars { opacity: 1; }
 
 main, .footer { position: relative; z-index: 2; }
 
-/* ===================== NAVBAR ===================== */
+/* NAVBAR */
 .nav {
   position: fixed;
   inset: 0 0 auto 0;
@@ -196,7 +190,7 @@ main, .footer { position: relative; z-index: 2; }
   width: 38px;
   height: 38px;
   border-radius: 10px;
-  background: transparent;  /* ikut warna navbar */
+  background: transparent;
 }
 
 .logo-mark .logo-img {
@@ -204,12 +198,12 @@ main, .footer { position: relative; z-index: 2; }
   height: 100%;
   border-radius: 8px;
   object-fit: contain;
-  mix-blend-mode: multiply;      /* mode terang: latar putih hilang, logo hitam tampil */
+  mix-blend-mode: multiply;
   transition: filter 0.35s;
 }
 
 html.dark .logo-mark .logo-img {
-  mix-blend-mode: screen;        /* mode gelap: logo jadi putih menyala */
+  mix-blend-mode: screen;
   filter: invert(1) brightness(1.05);
 }
 
@@ -338,7 +332,7 @@ html.dark .icon-moon { display: none; }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
-/* ===================== BUTTON ===================== */
+/* BUTTON */
 .btn {
   display: inline-block;
   padding: 13px 28px;
@@ -405,7 +399,7 @@ html.dark .btn-dark:hover { background: var(--accent-2); }
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
 }
 
-/* ===================== HERO ===================== */
+/* HERO */
 .hero {
   position: relative;
   padding: 160px 0 110px;
@@ -526,7 +520,6 @@ html.dark .pill { color: var(--accent-2); }
   transform: translateY(-3px);
 }
 
-/* -- Foto -- */
 .hero-visual {
   position: relative;
   z-index: 2;
@@ -610,7 +603,7 @@ html.dark .badge { color: var(--accent-2); }
 .badge-top { top: 9%; right: -2%; animation: float 5s ease-in-out infinite; }
 .badge-bottom { bottom: 12%; left: -2%; animation: float 6s ease-in-out infinite; }
 
-/* ===================== SECTION UMUM ===================== */
+/* SECTION UMUM */
 .section {
   padding: 110px 0;
 }
@@ -637,7 +630,7 @@ html.dark .badge { color: var(--accent-2); }
   line-height: 1.2;
 }
 
-/* ===================== TENTANG ===================== */
+/* TENTANG */
 .about-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -686,7 +679,7 @@ html.dark .badge { color: var(--accent-2); }
 .fact p { font-size: 0.95rem; color: var(--muted); line-height: 1.5; }
 .fact strong { color: var(--ink); font-weight: 700; }
 
-/* ===================== SKILL ===================== */
+/* SKILL */
 .skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -745,7 +738,7 @@ html.dark .badge { color: var(--accent-2); }
   color: var(--muted);
 }
 
-/* ===================== PORTOFOLIO ===================== */
+/* PORTOFOLIO */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -803,7 +796,7 @@ html.dark .badge { color: var(--accent-2); }
   color: var(--muted);
 }
 
-/* ===================== KONTAK ===================== */
+/* KONTAK */
 .section-dark {
   background:
     radial-gradient(1200px 500px at -10% -20%, var(--glow-a), transparent 55%),
@@ -851,7 +844,7 @@ html.dark .badge { color: var(--accent-2); }
 
 .sep { opacity: 0.4; }
 
-/* ===================== FOOTER ===================== */
+/* FOOTER */
 .footer {
   background: var(--bg-dark-2);
   color: var(--tint-200);
@@ -861,7 +854,7 @@ html.dark .badge { color: var(--accent-2); }
 
 .footer-inner { text-align: center; opacity: 0.85; }
 
-/* ===================== ANIMASI REVEAL ===================== */
+/* ANIMASI REVEAL */
 .reveal {
   opacity: 0;
   transform: translateY(26px);
@@ -879,7 +872,7 @@ html.dark .badge { color: var(--accent-2); }
 .reveal.d4 { transition-delay: 0.32s; }
 .reveal.d5 { transition-delay: 0.4s; }
 
-/* ===================== RESPONSIVE ===================== */
+/* RESPONSIVE */
 @media (max-width: 920px) {
   .hero { padding: 130px 0 80px; }
   .hero-inner {
@@ -904,11 +897,11 @@ html.dark .badge { color: var(--accent-2); }
   }
 
   .logo {
-    margin-right: auto;      /* dorong logo ke kiri */
+    margin-right: auto;
   }
 
   .nav-actions {
-    margin-left: auto;       /* paksa tombol menu & tema menempel kanan */
+    margin-left: auto;
     justify-self: auto;
   }
 

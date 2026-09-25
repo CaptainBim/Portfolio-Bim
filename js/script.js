@@ -1,8 +1,4 @@
-/* Personal Brand — interaksi ringan */
-
-/* ===================== MULAI SELALU DARI PALING ATAS ===================== */
-// Browser kadang mengembalikan posisi scroll / hash (mis. #tentang) dari
-// kunjungan sebelumnya. Kita matikan itu dan paksa mulai dari atas.
+/* MULAI SELALU DARI PALING ATAS */
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
 }
@@ -14,20 +10,16 @@ function scrollToTopInstant() {
 scrollToTopInstant();
 window.addEventListener("load", scrollToTopInstant);
 
-// Bersihkan hash (#tentang, dst) di URL agar tidak ada lompatan ke section
 if (location.hash) {
   try {
     history.replaceState(null, "", location.pathname + location.search);
-  } catch (e) {
-    /* abaikan untuk protokol tertentu (mis. file://) */
-  }
+  } catch (e) {}
 }
 
-/* ===================== TEMA TERANG / GELAP ===================== */
+/* TEMA TERANG / GELAP */
 const root = document.documentElement;
 const themeToggle = document.getElementById("themeToggle");
 
-// Terapkan tema tersimpan, atau ikuti preferensi sistem bila belum pernah dipilih
 const savedTheme = localStorage.getItem("theme");
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
@@ -39,7 +31,7 @@ themeToggle.addEventListener("click", () => {
   localStorage.setItem("theme", root.classList.contains("dark") ? "dark" : "light");
 });
 
-/* ===================== LANGIT BINTANG (mode hitam) ===================== */
+/* LANGIT BINTANG (mode hitam) */
 const starsContainer = document.getElementById("stars");
 const STAR_COUNT = 70;
 
@@ -53,16 +45,16 @@ for (let i = 0; i < STAR_COUNT; i++) {
   starsContainer.appendChild(star);
 }
 
-/* ===================== FOOTER TAHUN ===================== */
+/* FOOTER TAHUN */
 document.getElementById("year").textContent = new Date().getFullYear();
 
-/* ===================== NAVBAR SCROLL ===================== */
+/* NAVBAR SCROLL */
 const nav = document.getElementById("nav");
 const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 20);
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
-/* ===================== MENU MOBILE ===================== */
+/* MENU MOBILE */
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
@@ -71,7 +63,6 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("open");
 });
 
-// Tutup menu mobile saat link diklik
 navLinks.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     hamburger.classList.remove("open");
@@ -79,7 +70,7 @@ navLinks.querySelectorAll("a").forEach((link) => {
   });
 });
 
-/* ===================== REVEAL ON SCROLL ===================== */
+/* REVEAL ON SCROLL */
 const revealEls = document.querySelectorAll(".reveal");
 const observer = new IntersectionObserver(
   (entries) => {
