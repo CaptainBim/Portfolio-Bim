@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CaptainBim Home</title>
+  <meta name="description" content="CaptainBim — Game Developer, Programmer, and Designer. Godot, Unity, Java, JavaScript, Laravel, and design." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Logo & favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+<body>
+
+  <!-- Bintang animasi (muncul saat mode gelap) -->
+  <div class="stars" id="stars" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="logo">
+        <span class="logo-mark"><img src="images/logo.png" alt="CaptainBim logo" class="logo-img" /></span>
+        <span class="logo-text">Bim<span class="dot">.</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#tentang" data-i18n="nav.about">About</a>
+        <a href="#skill" data-i18n="nav.skills">Skills</a>
+        <a href="#portofolio" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="#kontak" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language / Ganti bahasa" title="Switch language / Ganti bahasa">
+          <span class="lang-opt active" data-lang="en">EN</span>
+          <span class="lang-sep">/</span>
+          <span class="lang-opt" data-lang="id">ID</span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Ganti mode terang/gelap" title="Light / Dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="pill reveal"><span class="status-dot"></span><span data-i18n="hero.status">Available for collaboration</span></span>
+
+          <h1 class="reveal d1" data-i18n="hero.hi">Hello, I'm<br /><span class="grad">CaptainBim</span></h1>
+          <p class="hero-role reveal d2" data-i18n="hero.role">Game Developer</p>
+          <p class="hero-desc reveal d3" data-i18n="hero.desc">
+            Game developer building interactive worlds with Godot &amp; Unity,
+            writing web code with Java, JavaScript, and Laravel, and designing
+            in Figma, Photoshop, Illustrator, and Aseprite. At home on Arch Linux &amp; Windows.
+          </p>
+
+          <div class="hero-actions reveal d4">
+            <a href="#portofolio" class="btn btn-dark" data-i18n="hero.viewPortfolio">View Portfolio</a>
+            <a href="#kontak" class="btn btn-ghost" data-i18n="hero.contactBtn">Contact Me →</a>
+          </div>
+
+          <!-- GANTI / EDIT: social links Anda -->
+          <div class="socials reveal d5">
+            <a href="https://www.instagram.com/captainbim10/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@mastahtiktok" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/ITWASMEBIMO" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.49h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg>
+            </a>
+            <a href="https://github.com/CaptainBim" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.26.72-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.2.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+            <!-- GANTI / EDIT: alamat email -->
+            <a href="mailto:bimowashere@gmail.com" aria-label="Email" title="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal d3">
+          <div class="photo-wrap">
+            <img src="images/foto-800.jpg" alt="Profile photo / Foto profil" class="photo" />
+          </div>
+          <span class="glow glow-1"></span>
+          <span class="glow glow-2"></span>
+          <div class="badge badge-top reveal d4" data-i18n="hero.badgeTop">✦ Design &amp; Work</div>
+          <div class="badge badge-bottom reveal d5" data-i18n="hero.badgeBottom">Creative · Minimalist</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT / TENTANG ===================== -->
+    <section class="section" id="tentang">
+      <div class="container">
+        <p class="section-tag reveal" data-i18n="about.tag">About</p>
+        <h2 class="section-title reveal d1" data-i18n="about.title">About Me</h2>
+
+        <div class="about-grid">
+          <div class="reveal d2">
+            <p class="about-text" data-i18n="about.p1">
+              Hi! I'm CaptainBim — a game developer who enjoys building interactive
+              worlds with <strong>Godot</strong> and <strong>Unity</strong>. Beyond games,
+              I write web code with Java, JavaScript, and Laravel, and wind down by
+              designing in Figma, Photoshop, Illustrator, and Aseprite.
+            </p>
+            <p class="about-text" data-i18n="about.p2">
+              As a devoted <strong>Arch Linux</strong> user alongside <strong>Windows</strong>,
+              I believe the best tools are the ones you fully control. I value clean
+              workflows, tidy code, and finished work.
+            </p>
+            <a href="#kontak" class="btn btn-outline" data-i18n="about.chatBtn">Let's Chat →</a>
+          </div>
+
+          <div class="facts reveal d3">
+            <div class="fact"><span class="fact-num">01</span><p data-i18n="about.fact1"><strong>Based in</strong><br />City, Indonesia</p></div>
+            <div class="fact"><span class="fact-num">02</span><p data-i18n="about.fact2"><strong>Main focus</strong><br />Game Development</p></div>
+            <div class="fact"><span class="fact-num">03</span><p data-i18n="about.fact3"><strong>Principle</strong><br />Simple, meaningful, consistent</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS / KEAHLIAN ===================== -->
+    <section class="section section-alt" id="skill">
+      <div class="container">
+        <p class="section-tag reveal" data-i18n="skills.tag">Skills</p>
+        <h2 class="section-title reveal d1" data-i18n="skills.title">What I Do</h2>
+
+        <div class="skills">
+          <div class="skill-card reveal">
+            <span class="skill-icon">🎮</span>
+            <h3 data-i18n="skills.s1">Game Development</h3>
+            <p data-i18n="skills.s1d">Building 2D &amp; 3D games with Godot and Unity, from concept to release.</p>
+          </div>
+          <div class="skill-card reveal d2">
+            <span class="skill-icon">💻</span>
+            <h3 data-i18n="skills.s2">Programming</h3>
+            <p data-i18n="skills.s2d">Writing web and app code with Java, JavaScript, and Laravel.</p>
+          </div>
+          <div class="skill-card reveal d3">
+            <span class="skill-icon">🎨</span>
+            <h3 data-i18n="skills.s3">Design &amp; Multimedia</h3>
+            <p data-i18n="skills.s3d">UI in Figma, illustration &amp; pixel art in Photoshop, Illustrator &amp; Aseprite, video editing in Vegas Pro.</p>
+          </div>
+          <div class="skill-card reveal d4">
+            <span class="skill-icon">🐧</span>
+            <h3 data-i18n="skills.s4">Platform</h3>
+            <p data-i18n="skills.s4d">Daily driver on Arch Linux &amp; Windows as my main operating systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PORTFOLIO / PORTOFOLIO ===================== -->
+    <section class="section" id="portofolio">
+      <div class="container">
+        <p class="section-tag reveal" data-i18n="portfolio.tag">Portfolio</p>
+        <h2 class="section-title reveal d1" data-i18n="portfolio.title">Selected Works</h2>
+
+        <div class="projects">
+          <!-- GANTI / EDIT: proyek Anda -->
+          <a href="https://github.com/CaptainBim/Dorobaku" target="_blank" rel="noopener" class="project-card reveal">
+            <div class="project-thumb thumb-1"><span data-i18n="portfolio.p1">DoroBaku</span></div>
+            <div class="project-info">
+              <span class="project-tag">Game</span>
+              <h3 data-i18n="portfolio.p1">DoroBaku</h3>
+              <p data-i18n="portfolio.p1d">A 2D pixel-art educational puzzle game that challenges players to arrange letter tiles into proper Indonesian words using Sokoban-style mechanics — blending logic puzzles with language learning in an interactive format.</p>
+            </div>
+          </a>
+          <a href="https://github.com/CaptainBim/EightSeals" target="_blank" rel="noopener" class="project-card reveal d2">
+            <div class="project-thumb thumb-2"><span data-i18n="portfolio.p2">Eight Seals</span></div>
+            <div class="project-info">
+              <span class="project-tag">Game · WIP</span>
+              <h3 data-i18n="portfolio.p2">Eight Seals</h3>
+              <p data-i18n="portfolio.p2d">A Tower Defense Roguelike game with a merchant system. Still in development (WIP).</p>
+            </div>
+          </a>
+          <a href="https://github.com/CaptainBim/MiePangsitJakarta" target="_blank" rel="noopener" class="project-card reveal d3">
+            <div class="project-thumb thumb-3"><span data-i18n="portfolio.p3">Mie Pangsit Jakarta</span></div>
+            <div class="project-info">
+              <span class="project-tag">Web App</span>
+              <h3 data-i18n="portfolio.p3">Mie Pangsit Jakarta</h3>
+              <p data-i18n="portfolio.p3d">Website for a home-cooked food brand serving warm dishes daily — rice &amp; sides, noodles &amp; meatballs, and fresh drinks, made with fresh ingredients at friendly prices.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT / KONTAK ===================== -->
+    <section class="section section-dark" id="kontak">
+      <div class="container contact-inner">
+        <p class="section-tag reveal tag-light" data-i18n="contact.tag">Contact</p>
+        <h2 class="section-title reveal d1 title-light" data-i18n="contact.title">Let's Work Together</h2>
+        <p class="contact-text reveal d2" data-i18n="contact.text">
+          Got a project, an idea, or just want to say hi? My inbox is always open.
+        </p>
+
+        <!-- GANTI / EDIT: alamat email -->
+        <a href="mailto:bimowashere@gmail.com" class="btn btn-light reveal d3">bimowashere@gmail.com</a>
+
+        <div class="contact-socials reveal d4">
+          <a href="https://www.instagram.com/captainbim10/" target="_blank" rel="noopener">Instagram</a>
+          <span class="sep">·</span>
+          <a href="https://www.tiktok.com/@mastahtiktok" target="_blank" rel="noopener">TikTok</a>
+          <span class="sep">·</span>
+          <a href="https://www.facebook.com/ITWASMEBIMO" target="_blank" rel="noopener">Facebook</a>
+          <span class="sep">·</span>
+          <a href="https://github.com/CaptainBim" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> CaptainBim. <span data-i18n="footer.rights">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
