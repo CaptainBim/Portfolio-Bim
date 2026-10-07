@@ -760,7 +760,9 @@ html.dark .badge { color: var(--accent-2); }
 }
 
 .project-thumb {
+  position: relative;
   height: 190px;
+  overflow: hidden;
   display: grid;
   place-items: center;
   color: rgba(255, 255, 255, 0.92);
@@ -774,9 +776,12 @@ html.dark .badge { color: var(--accent-2); }
 .thumb-3 { background: var(--thumb-3); }
 
 .thumb-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
+  display: block;
 }
 
 .project-info {
