@@ -42,8 +42,8 @@ const I18N = {
     "portfolio.p1d": "A 2D pixel-art educational puzzle game that challenges players to arrange letter tiles into proper Indonesian words using Sokoban-style mechanics — blending logic puzzles with language learning in an interactive format.",
     "portfolio.p2": "Eight Seals",
     "portfolio.p2d": "A Tower Defense Roguelike game with a merchant system. Still in development (WIP).",
-    "portfolio.p3": "Mie Pangsit Jakarta",
-    "portfolio.p3d": "Website for a home-cooked food brand serving warm dishes daily — rice &amp; sides, noodles &amp; meatballs, and fresh drinks, made with fresh ingredients at friendly prices.",
+    "portfolio.p3": "Hoshiva",
+    "portfolio.p3d": "A modern wallpaper search engine. A Node/Express backend aggregates Wallhaven and other boorus, then serves results perfectly sized for your screen — complete with manual cropping and upscale.",
 
     "contact.tag": "Contact",
     "contact.title": "Let's Work Together",
@@ -94,8 +94,8 @@ const I18N = {
     "portfolio.p1d": "Gim puzzle edukasi 2D bergaya pixel art yang menantang pemain menyusun kotak huruf menjadi kata baku lewat mekanisme ala Sokoban — perpaduan logika dan pembelajaran bahasa Indonesia dalam format interaktif.",
     "portfolio.p2": "Eight Seals",
     "portfolio.p2d": "Tower Defense Roguelike dengan sistem merchant. Masih dalam tahap pengembangan (WIP).",
-    "portfolio.p3": "Mie Pangsit Jakarta",
-    "portfolio.p3d": "Website masakan rumahan yang dimasak hangat setiap hari dengan cita rasa khas — nasi &amp; lauk, mie &amp; bakso, sampai minuman segar. Semua diracik dengan bahan segar dan harga yang bersahabat.",
+    "portfolio.p3": "Hoshiva",
+    "portfolio.p3d": "Mesin pencari wallpaper modern. Backend Node/Express menggabungkan Wallhaven dan beberapa booru, lalu menyajikan hasil pas dengan ukuran layar Anda — lengkap dengan crop manual dan upscale.",
 
     "contact.tag": "Kontak",
     "contact.title": "Mari Bekerja Sama",
