@@ -808,13 +808,6 @@ html.dark .badge { color: var(--accent-2); }
 }
 
 /* MODE GELAP PORTOFOLIO */
-html.dark #portofolio {
-  background: #ffffff;
-}
-
-html.dark #portofolio .section-title { color: #10291f; }
-html.dark #portofolio .section-tag { color: #1c8a60; }
-
 html.dark .thumb-1,
 html.dark .thumb-2,
 html.dark .thumb-3 {
