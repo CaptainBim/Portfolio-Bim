@@ -784,6 +784,15 @@ html.dark .badge { color: var(--accent-2); }
   display: block;
 }
 
+/* DOROBAKU FOTO */
+.project-card:nth-child(1) .thumb-img {
+  position: static;
+  width: auto;
+  height: 190px;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
 .project-info {
   padding: 22px 24px 26px;
 }
